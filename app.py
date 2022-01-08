@@ -46,7 +46,7 @@ def handle_message(event):
         r = '用了就知道哇～'
     elif msg == '好酷':
         r = '謝謝讚美 ><'
-    elif msg in ['?' , '？']:
+    elif ['?' , '？'] in msg:
         r = '已記錄您的問題，稍晚會儘快回復您～'
 
     line_bot_api.reply_message(
