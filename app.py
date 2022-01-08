@@ -40,10 +40,10 @@ def handle_message(event):
     msg = event.message.text
     r = '很抱歉，我看不懂您說什麼'
 
-    if '給我貼圖' in msg:
+    if msg in ['hi' , 'Hi']:
         sticker_message = StickerSendMessage(
-            package_id='11539',
-            sticker_id='52114121'
+            package_id='11537',
+            sticker_id='52002738'
         )
 
     elif '這個' in msg:
@@ -52,10 +52,10 @@ def handle_message(event):
             sticker_id='52114129'
         )
 
-        line_bot_api.reply_message(
-            event.reply_token,
-            sticker_message)
-        return
+    line_bot_api.reply_message(
+        event.reply_token,
+        sticker_message)
+    return
 
     if msg in ['hi' , 'Hi']:
         r = '哈囉，很高興認識你～'
