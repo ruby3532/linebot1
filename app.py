@@ -56,6 +56,8 @@ def handle_message(event):
         event.reply_token,
         sticker_message)
 
+    return
+    
     if msg in ['hi' , 'Hi']:
         r = '哈囉，很高興認識你～'
     elif msg == '這是什麼？':
