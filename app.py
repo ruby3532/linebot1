@@ -52,10 +52,10 @@ def handle_message(event):
             sticker_id='52114129'
         )
 
-    line_bot_api.reply_message(
-        event.reply_token,
-        sticker_message)
-    
+        line_bot_api.reply_message(
+            event.reply_token,
+            sticker_message)
+        return
 
     if msg in ['hi' , 'Hi']:
         r = '哈囉，很高興認識你～'
