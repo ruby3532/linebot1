@@ -46,15 +46,19 @@ def handle_message(event):
             sticker_id='52002738'
         )
 
+        line_bot_api.reply_message(
+        event.reply_token,
+        sticker_message)
+
     elif '這個' in msg:
         sticker_message = StickerSendMessage(
             package_id='11539',
             sticker_id='52114129'
         )
 
-    line_bot_api.reply_message(
-        event.reply_token,
-        sticker_message)
+        line_bot_api.reply_message(
+            event.reply_token,
+            sticker_message)
 
     return
 
